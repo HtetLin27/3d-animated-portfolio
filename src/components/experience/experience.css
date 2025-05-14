@@ -1,0 +1,145 @@
+.experience-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  /* background: linear-gradient(180deg, #0c0c1d 0%, #1a1a2e 100%); */
+  color: white;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* .timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #00f2fe 0%, #4facfe 100%);
+  opacity: 0.3;
+} */
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-header {
+  margin-bottom: 1.5rem;
+}
+
+.role {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #4facfe;
+  margin-bottom: 0.5rem;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-info h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.location {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+.period {
+  color: #4facfe;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.description {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag {
+  background: rgba(79, 172, 254, 0.1);
+  color: #4facfe;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(79, 172, 254, 0.2);
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 3rem 1rem;
+  }
+
+  .experience-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-content {
+    margin-left: 40px;
+  }
+
+  .role {
+    font-size: 1.5rem;
+  }
+
+  .company-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+} 

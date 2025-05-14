@@ -5,8 +5,8 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -16,7 +16,6 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
-
 }
 
 a {
@@ -30,18 +29,22 @@ a {
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+
 }
 
-/* .section{
+.home-section{
   height: 100vh;
-  scroll-snap-align: center;
-} */
-section {
-  height: 100vh;
-  scroll-snap-align: center;
 }
+.services-section{
+  height: 100vh;
+}
+
+section {
+  min-height: 100vh;
+  scroll-snap-align: center;
+  scroll-snap-stop: normal;
+}
+
 section:nth-child(1) {
   /* background-color: #12071f; */
 }
