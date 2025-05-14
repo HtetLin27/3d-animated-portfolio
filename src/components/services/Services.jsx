@@ -1,8 +1,39 @@
-import React from "react";
 import "./services.css";
 import ComputerModelContainer from "./computer/ComputerModelContainer";
 import Counter from "./Counter";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
+const textVariants ={
+  initial:{
+    x:-100,
+    y:-100,
+    opacity:0
+  },
+  animate:{
+    x:0,
+    y:0,
+    opacity:1,
+    transition:{
+      duration:1,
+    }
+  }
+}
+
+const listVariants ={
+  initial:{
+    x:-100,
+    opacity:0
+  },
+  animate:{
+    x:0,
+    opacity:1,
+    transition:{
+      duration:1,
+      straggerChildren:0.5,
+    }
+  }
+}
 const services = [
   {
     id: 1,
@@ -24,13 +55,15 @@ const services = [
   },
 ];
 const Services = () => {
+  const ref = useRef()
+  const isInview = useInView(ref,{margin:"-200px"})
   return (
-    <div className="services">
+    <div className="services" ref={ref}>
       <div className="sSection left">
-        <h1 className="sTitle">How do I help?</h1>
-        <div className="serviceList">
+        <motion.h1 variants={textVariants} animate={isInview ? "animate" : "initial"} className="sTitle">How do I help?</motion.h1>
+        <motion.div variants={listVariants} animate={isInview ? "animate" : "initial"} className="serviceList">
           {services.map((service) => (
-            <div className="service" key={service.id}>
+            <motion.div variants={textVariants} className="service" key={service.id}>
               <div className="serviceIcon">
                 <img src={service.img} alt="" />
               </div>
@@ -38,9 +71,9 @@ const Services = () => {
                 <h2>{service.title}</h2>
                 <h3>{service.counter} Projects</h3>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         <div className="counterList">
           <Counter from={0} to={104} text="Projects Completed" />
           <Counter from={0} to={72} text="Happy Clients" />

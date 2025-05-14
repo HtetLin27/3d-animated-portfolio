@@ -2,21 +2,20 @@ import Contact from "./components/contact/Contact";
 import Hero from "./components/hero/Hero";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
-import Test3d from "./components/Test3d";
 
 const App = () => {
   return (
     <div className="container">
-      <section id="#home">
+      <section id="#home" className="section">
         <Hero />
       </section>
-      <section id="#services">
+      <section id="#services" className="section">
         <Services />
       </section>
-      <section id="#portfolio">
+      {/* <section id="portfolio" className="section"> */}
         <Portfolio />
-      </section>
-      <section id="#contact">
+      {/* </section> */}
+      <section id="#contact" className="section">
         <Contact />
       </section>
     </div>
