@@ -20,9 +20,9 @@ const App = () => {
       {/* <section id="services" className="section">
         <Services />
       </section> */}
-      {/* <section id="portfolio" className="section portfolio-section"> */}
+      <section id="portfolio" className="section portfolio-section">
         <Portfolio />
-      {/* </section> */}
+      </section>
       <section id="getintouch" className="section">
         <GetInTouch />
       </section>

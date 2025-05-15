@@ -1,11 +1,9 @@
 .portfolio {
   padding: 50px 0;
   min-height: 100vh;
-  scroll-snap-type: y mandatory;
-  /* background: linear-gradient(to bottom, #12071f, #2f204e); */
-  /* scroll-snap-stop: normal; */
+  /* scroll-snap-type: y mandatory;
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: normal; */
 }
 /* .portfolio-title{
   position: sticky;
@@ -15,14 +13,13 @@
 .pList {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   padding: 20px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .pItem {
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
   overflow: hidden;
   display: flex;
   align-items: center;

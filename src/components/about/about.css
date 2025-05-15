@@ -1,5 +1,5 @@
 .about-section {
-  height: 100vh;
+  min-height: 100vh;
   padding: 100px 0;
   /* background: linear-gradient(to bottom, #12071f, #2f204e); */
   scroll-snap-align: start;
@@ -9,7 +9,7 @@
 }
 
 .about-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 20px;
 }
