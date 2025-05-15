@@ -29,20 +29,19 @@ a {
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
-.home-section{
+.home-section {
   min-height: 100vh;
 }
-.services-section{
+.services-section {
   min-height: 100vh;
 }
 
 section {
   min-height: 100vh;
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
 }
 
 section:nth-child(1) {

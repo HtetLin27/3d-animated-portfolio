@@ -71,15 +71,15 @@
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 14px;
 }
 
 .pText h1 {
-  font-size: 48px;
+  font-size: 36px;
   background: linear-gradient(45deg, #ff6b6b, #ffd93d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .pText p {
@@ -91,34 +91,34 @@
 .tools-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin: 20px 0;
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .tools-section,
 .languages-section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .tools-section h3,
 .languages-section h3 {
   font-size: 20px;
   color: #ff6b6b;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .tools-list,
 .languages-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
 }
 
 .tool-tag,
 .language-tag {
-  padding: 6px 12px;
+  padding: 3px 6px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 500;
@@ -222,7 +222,7 @@
 }
 
 .portfolio-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -234,7 +234,7 @@
 }
 
 .portfolio-title::before {
-  content: 'My Work';
+  content: "My Work";
   position: absolute;
   top: -30px;
   left: 50%;

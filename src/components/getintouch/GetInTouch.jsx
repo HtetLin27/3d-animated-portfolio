@@ -1,88 +1,61 @@
-import { motion } from "framer-motion";
+import React from "react";
 import "./getintouch.css";
-
-const contactInfo = [
-  {
-    label: "Location",
-    value: "Yangon, Myanmar",
-    icon: "📍",
-    color: "#4facfe"
-  },
-  {
-    label: "Phone",
-    value: "+959254351761",
-    icon: "📞",
-    color: "#00f2fe",
-    link: "tel:+959254351761"
-  },
-  {
-    label: "Email",
-    value: "htetlinko.dev@gmail.com",
-    icon: "✉️",
-    color: "#ff6b6b",
-    link: "mailto:htetlinko.dev@gmail.com"
-  }
-];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.2 + i * 0.15, duration: 0.6, ease: "easeOut" }
-  })
-};
 
 const GetInTouch = () => {
   return (
     <section className="getintouch-section">
-      <motion.div 
-        className="getintouch-container redesigned"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <motion.h1 
-          className="getintouch-title redesigned"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-        >
-          Get In Touch
-        </motion.h1>
-        <div className="contact-card-list">
-          {contactInfo.map((info, idx) => (
-            <motion.div 
-              className="contact-card"
-              key={info.label}
-              custom={idx}
-              initial="hidden"
-              whileInView="visible"
-              variants={cardVariants}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03, boxShadow: "0 6px 24px rgba(79,172,254,0.15)" }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
-            >
-              <span className="contact-card-icon" style={{ background: info.color }}>
-                {info.icon}
-              </span>
-              <div className="contact-card-info">
-                <span className="contact-card-label">{info.label}</span>
-                {info.link ? (
-                  <a href={info.link} className="contact-card-value" target="_blank" rel="noopener noreferrer">
-                    {info.value}
-                  </a>
-                ) : (
-                  <span className="contact-card-value">{info.value}</span>
-                )}
-              </div>
-            </motion.div>
-          ))}
+      <div className="getintouch-container">
+        <p className="getintouch-subtitle">
+          Let’s build something amazing together!
+        </p>
+        <h1 className="getintouch-email">
+          <a
+            href="mailto:htetlinko.dev@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            htetlinko.dev@gmail.com
+          </a>
+        </h1>
+        <div className="getintouch-links">
+          <a
+            href="https://www.linkedin.com/in/htet-lin-ko-411b02204/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="getintouch-link"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://www.facebook.com/htetlin.ko.7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="getintouch-link"
+          >
+            Facebook
+          </a>
+          <a
+            href="https://github.com/HtetLin27"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="getintouch-link"
+          >
+            GitHub
+          </a>
+          {/* <a href="tel:+959254351761" className="getintouch-link">
+            Phone
+          </a> */}
         </div>
-      </motion.div>
+      </div>
+      <footer className="getintouch-footer">
+        <p>© 2025 Htet Lin Ko</p>
+        {/* <div className="footer-contact">
+          <span>Yangon, Myanmar</span>
+          <span>+959254351761</span>
+        </div> */}
+      </footer>
     </section>
   );
 };
 
-export default GetInTouch; 
+export default GetInTouch;
